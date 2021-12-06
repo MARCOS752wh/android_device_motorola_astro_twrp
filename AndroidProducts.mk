@@ -15,9 +15,6 @@
 #
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/omni_astro.mk
+     $(LOCAL_DIR)/twrp_astro.mk
 
-COMMON_LUNCH_CHOICES := \
-     omni_astro-eng \
-     omni_astro-userdebug \
-     omni_astro-user
+COMMON_LUNCH_CHOICES := twrp_astro-eng
