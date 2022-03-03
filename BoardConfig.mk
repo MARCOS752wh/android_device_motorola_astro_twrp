@@ -167,25 +167,21 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     ashmemd_aidl_interface-cpp \
     libashmemd_client \
     libcap \
-    libicui18n \
     libicuuc \
     libion \
-    libpcrecpp \
-    libxml2
+    libpcrecpp
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-	$(TARGET_OUT_EXECUTABLES)/ashmemd
+	$(TARGET_OUT_EXECUTABLES)/ashmemd   
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.base@1.0.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libcap.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libicui18n.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpcrecpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
 
 # Symbolic Simlinks
 BOARD_ROOT_EXTRA_SYMLINKS := \
@@ -217,7 +213,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 # Team Win Recovery - Display
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/qcom_battery/"
-TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone22/temp" # CPU BIG CORE 0
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone36/temp" # Big cores max step
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 TW_MAX_BRIGHTNESS := 4095
@@ -244,4 +240,3 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 
 # Team Win Recovery - USB
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
