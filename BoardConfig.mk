@@ -160,6 +160,11 @@ USE_RECOVERY_INSTALLER := true
 RECOVERY_INSTALLER_PATH := bootable/recovery/installer
 TARGET_RECOVERY_WIPE := $(LOCAL_PATH)/recovery/root/system/etc/recovery.wipe
 
+BOARD_RECOVERY_KERNEL_MODULES_LOAD := \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/nova_0flash_mmi.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/himax_v2_mmi.ko \
+    $(LOCAL_PATH)/recovery/root/vendor/lib/modules/1.1/himax_v2_mmi_hx83102d.ko
+
 # Recovery - Modules
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hidl.base@1.0 \
